@@ -1,7 +1,7 @@
-// alert("hey anoop");
 
 const defaultResult = 0;
 let currentResult = defaultResult;
+let logEntries = [];
 
 // function which returns user input
 
@@ -21,8 +21,11 @@ function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
 function add() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
-    currentResult = currentResult + enteredNumber;
+    currentResult += enteredNumber;
     createAndWriteOutput('+', initialResult, enteredNumber);
+    logEntries.push(enteredNumber);
+    console.log(logEntries);
+    // console.log(logEntries[1]);
 }
 
 // sustraction function 
@@ -30,7 +33,7 @@ function add() {
 function substract() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
-    currentResult = currentResult - enteredNumber;
+    currentResult -= enteredNumber;
     createAndWriteOutput('-', initialResult, enteredNumber);
 
 }
@@ -40,7 +43,7 @@ function substract() {
 function multiply() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
-    currentResult = currentResult * enteredNumber;
+    currentResult *= enteredNumber;
     createAndWriteOutput('*', initialResult, enteredNumber);
 }
 
@@ -49,7 +52,7 @@ function multiply() {
 function divide() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
-    currentResult = currentResult / enteredNumber;
+    currentResult /= enteredNumber;
     createAndWriteOutput('/', initialResult, enteredNumber);
 }
 
