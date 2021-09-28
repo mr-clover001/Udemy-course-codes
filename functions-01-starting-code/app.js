@@ -76,3 +76,37 @@ startGameBtn.addEventListener('click', () => {
     gameIsRunning = false;
   });
 
+
+  // not related to game 
+
+  const sumUp = (resultHandler,...numbers) => {    // this is rest operator and rest operatorr is always is in end
+
+    const validateNumber = (number) =>{     // function inside a function  
+     return isNaN(number) ? 0 : number;
+    };
+
+    let sum = 0;
+    for (const num of numbers){
+      sum += validateNumber(num);
+
+    }
+    resultHandler(sum);
+  };
+
+  const subtractUp = function(){
+    let sum = 0;
+    for (const num of arguments){   //this is a old way of using rest operator 
+                                    // so dont use that
+      sum += num;
+
+    }
+    return sum;
+  };
+
+  const showResult = (result) => {
+    alert('the result aftr adding all numbers is: ' + result);
+  };
+
+sumUp( showResult ,1 ,2 ,3 ,5 ,67 ,6);
+sumUp( showResult ,23 ,33 ,32 ,32 ,32 ,1 ,2 ,3 ,5 ,67 ,6);
+console.log(subtractUp(2,5,4,3,1,7,8));
