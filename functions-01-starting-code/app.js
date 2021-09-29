@@ -79,7 +79,7 @@ startGameBtn.addEventListener('click', () => {
 
   // not related to game 
 
-  const sumUp = (resultHandler,...numbers) => {    // this is rest operator and rest operatorr is always is in end
+  const sumUp = (resultHandler,...numbers) => {    // this is rest parameters and rest parameters is always is in end
 
     const validateNumber = (number) =>{     // function inside a function  
      return isNaN(number) ? 0 : number;
@@ -95,7 +95,7 @@ startGameBtn.addEventListener('click', () => {
 
   const subtractUp = function(){
     let sum = 0;
-    for (const num of arguments){   //this is a old way of using rest operator 
+    for (const num of arguments){   //this is a old way of using rest parameters 
                                     // so dont use that
       sum += num;
 

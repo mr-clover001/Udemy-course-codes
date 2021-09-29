@@ -14,16 +14,27 @@
         display: flex;
         flex-direction: column;
     }
-    a{
-        border: 2px solid black;
+    .menu-elements{
+        display:block;
+        border: 2px solid white;
         padding: 12px 12px;
         background-color: black;
+        
+    }
+
+    .navbar2{
+        display: none;
+        
+    }
+
+    .menu-elements a{
+        text-decoration: none;
         color: white;
     }
 </style>
 <body>
     <nav>
-        <div><button class="menu-button">MENU</button>
+        <div><button class="button">MENU</button>
         </div>
         <div class="navbar">
             <div class="menu-elements"><a href="">HOME</a></div>
@@ -33,5 +44,6 @@
             <div class="menu-elements"><a href="">SEARCH</a></div>
         </div>
     </nav>
+    <script src="/DOM/index1.js"></script>
 </body>
 </html>
