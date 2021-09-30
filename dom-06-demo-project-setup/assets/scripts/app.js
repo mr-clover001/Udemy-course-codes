@@ -25,8 +25,10 @@ if(movies.length === 0)
 }
 };
 
-const renderNewMovieElement = () =>{
-    
+const renderNewMovieElement = (title, imageUrl , rating) =>{
+    const newMovieElement = document.createElement('li');
+
+
 };
 
 const toggleBackdrop = () => {
